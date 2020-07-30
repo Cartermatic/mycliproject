@@ -1,9 +1,9 @@
-class Location
+class Movie
 
-    def initialize
+    attr_accessor :title, :overview, :score
 
-        
-    end
+   
+
 
 end
 
