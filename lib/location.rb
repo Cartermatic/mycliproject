@@ -17,6 +17,10 @@ class Movie
         end
     end
 
+    def self.create_from_collection(movies)
+        movies.each {|movie| self.new(movie)}
+    end
+
 
 end
 
