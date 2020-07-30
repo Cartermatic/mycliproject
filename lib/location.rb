@@ -11,7 +11,12 @@ class Movie
         @@all
     end
 
- 
+    def self.find_by_title(title)
+        self.all.detect do |movie|
+            movie.title == title
+        end
+    end
+
 
 end
 
