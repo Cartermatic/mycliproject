@@ -7,8 +7,8 @@ class CLI
         movie_time_image
         welcome_greeting
         ask_for_movie
+        loop_back_to_movie_search
      
-
     end
 
 
@@ -26,6 +26,7 @@ end
 
 #1
     def welcome_greeting
+        puts " "
         puts "Hey there! Thanks for using my film searching program, Movie Time!"
         puts " "
         puts "Just search for a film and I will do my best to give you some quick information about it!"
@@ -39,15 +40,19 @@ end
             list_options
             get_input_of_options(new_movie)
         else
+            puts " "
             puts "Hey you! That is not a real movie!"
+            puts " "
             ask_for_movie
         end
     end
 #4
     def list_options
+        puts " "
         puts "Choose one to learn more information regarding the movie you have chosen!"
         puts "1. A short synopsis."
         puts "2. The IMDB score of the film."
+        puts " "
     
     end
 #5
