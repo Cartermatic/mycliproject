@@ -2,28 +2,23 @@ require 'pry'
 
 class CLI
 
-    def call
-        
+    def call     
         movie_time_image
         welcome_greeting
         ask_for_movie
-        # loop_back_to_movie_search
-       
-     
     end
 
 
-def movie_time_image
-
-    puts " "
-    puts '   ___  ___           _        _____ _                 '
-    puts '   |  \/  |          (_)      |_   _(_)                '
-    puts '   | .  . | _____   ___  ___    | |  _ _ __ ___   ___  '
-    puts '   | |\/| |/ _ \ \ / / |/ _ \   | | | | `_ ` _ \ / _ \ '
-    puts '   | |  | | (_) \ V /| |  __/   | | | | | | | | |  __/ '
-    puts '   \_|  |_/\___/ \_/ |_|\___|   \_/ |_|_| |_| |_|\___| '
-    puts " "                                                       
-end
+    def movie_time_image
+        puts " "
+        puts '   ___  ___           _        _____ _                 '
+        puts '   |  \/  |          (_)      |_   _(_)                '
+        puts '   | .  . | _____   ___  ___    | |  _ _ __ ___   ___  '
+        puts '   | |\/| |/ _ \ \ / / |/ _ \   | | | | `_ ` _ \ / _ \ '
+        puts '   | |  | | (_) \ V /| |  __/   | | | | | | | | |  __/ '
+        puts '   \_|  |_/\___/ \_/ |_|\___|   \_/ |_|_| |_| |_|\___| '
+        puts " "                                                       
+    end
 
 #1
     def welcome_greeting
@@ -54,13 +49,13 @@ end
         puts "Choose one to learn more information regarding the movie you have chosen!"
         puts "1. A short synopsis."
         puts "2. The IMDB score of the film."
-        puts " "
-    
+        puts " "   
     end
 #5
     def get_input_of_options(new_movie)
+
         user_input = gets.strip
-        # binding.pry
+
         if user_input == "1"
            puts new_movie.overview
         elsif user_input == "2"
@@ -77,7 +72,9 @@ end
         puts " "
         puts "In fact, why don't you pop some popcorn right now as well? Movie Time makes learning about movies easy!"
         puts " "
+
         user_input = gets.strip
+
         if Movie.find_by_title(user_input)
             find_by_title
         else
@@ -91,15 +88,15 @@ end
         puts "Just tell me what movie so I can help you out!"
         puts " "
         puts "If you are finished and would like to exit the program, simply type exit."
+
         user_input = gets.strip
+
         if user_input == "exit" || user_input == "Exit"
             abort "\nThank you for using Movie Time! Enjoy your movie!"
         elsif Movie.find_by_title(user_input)
             find_by_title
         else
             get_movie(user_input)
-        end
-      
+        end    
     end
-
 end

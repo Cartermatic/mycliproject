@@ -17,7 +17,6 @@ class API
         else 
             false
         end
-        # binding.pry
     end
 
 end
