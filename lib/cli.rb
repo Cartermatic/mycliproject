@@ -26,17 +26,17 @@ class CLI
         puts " "
     end
 
-    # def get_movie(movie_name)
-    #     response = API.get_movie(movie_name)
-    #     if response
-    #     new_movie = Movie.new(response)
-    #     list_options
-    #     get_input_of_options(new_movie)
-    #     else
-    #         puts "Hey you! That is not a real movie!"
-    #         ask_for_movie
-    #     end
-    # end
+    def get_movie(movie_name)
+        response = API.get_movie(movie_name)
+        if response
+        new_movie = Movie.new(response)
+        list_options
+        get_input_of_options(new_movie)
+        else
+            puts "Hey you! That is not a real movie!"
+            ask_for_movie
+        end
+    end
 
     # def list_options
     #     puts "Choose one to learn more information regarding the movie you have chosen!"
