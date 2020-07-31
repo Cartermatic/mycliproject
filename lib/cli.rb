@@ -19,12 +19,12 @@ class CLI
 
 # movie_time_image
 
-    # def welcome_greeting
-    #     puts "Hey there! Thanks for using my film searching program, Movie Time!"
-    #     puts " "
-    #     puts "Just search for a film and I will do my best to give you some quick information about it!"
-    #     puts " "
-    # end
+    def welcome_greeting
+        puts "Hey there! Thanks for using my film searching program, Movie Time!"
+        puts " "
+        puts "Just search for a film and I will do my best to give you some quick information about it!"
+        puts " "
+    end
 
     # def get_movie(movie_name)
     #     response = API.get_movie(movie_name)
