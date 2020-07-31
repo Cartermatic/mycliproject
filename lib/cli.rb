@@ -38,12 +38,12 @@ class CLI
         end
     end
 
-    # def list_options
-    #     puts "Choose one to learn more information regarding the movie you have chosen!"
-    #     puts "1. A short synopsis."
-    #     puts "2. The IMDB score of the film."
+    def list_options
+        puts "Choose one to learn more information regarding the movie you have chosen!"
+        puts "1. A short synopsis."
+        puts "2. The IMDB score of the film."
     
-    # end
+    end
 
     # def get_input_of_options(new_movie)
     #     user_input = gets.strip
