@@ -7,7 +7,8 @@ class CLI
         movie_time_image
         welcome_greeting
         ask_for_movie
-        loop_back_to_movie_search
+        # loop_back_to_movie_search
+       
      
     end
 
@@ -45,6 +46,7 @@ end
             puts " "
             ask_for_movie
         end
+        loop_back_to_movie_search
     end
 #4
     def list_options
@@ -90,11 +92,14 @@ end
         puts " "
         puts "If you are finished and would like to exit the program, simply type exit."
         user_input = gets.strip
-        if Movie.find_by_title(user_input)
+        if user_input == "exit" || user_input == "Exit"
+            abort "\nThank you for using Movie Time! Enjoy your movie!"
+        elsif Movie.find_by_title(user_input)
             find_by_title
         else
             get_movie(user_input)
         end
+      
     end
 
 end
