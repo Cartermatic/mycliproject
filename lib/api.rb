@@ -8,7 +8,6 @@ class API
     def self.get_movie(movie_name)
         
         response = HTTParty.get("https://api.themoviedb.org/3/search/movie?api_key=#{@@key}&query=#{movie_name}")
-        binding.pry
         if response["results"].length > 0
         movie_hash = {}
         movie_hash[:overview] = response["results"][0]["overview"]
@@ -23,6 +22,6 @@ class API
 
 end
 
-# new = API.get_movie("akvjd;la")
+# new = API.get_movie("batman")
 # puts new
 

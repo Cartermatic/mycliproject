@@ -5,7 +5,7 @@ class Movie
     @@all = []
 
     def initialize(movie)
-        movie.each {|key, value| self.send({"#{key}="}, value)
+        movie.each {|key, value| self.send("#{key}=", value)}
         @@all << self        
     end
 

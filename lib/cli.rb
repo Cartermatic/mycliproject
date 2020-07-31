@@ -2,61 +2,68 @@ require 'pry'
 
 class CLI
 
+    def call
+        
+        movie_time_image
+        welcome_greeting
+        ask_for_movie
+     
+
+    end
 
 
+def movie_time_image
 
-# def movie_time_image
+    puts " "
+    puts '   ___  ___           _        _____ _                 '
+    puts '   |  \/  |          (_)      |_   _(_)                '
+    puts '   | .  . | _____   ___  ___    | |  _ _ __ ___   ___  '
+    puts '   | |\/| |/ _ \ \ / / |/ _ \   | | | | `_ ` _ \ / _ \ '
+    puts '   | |  | | (_) \ V /| |  __/   | | | | | | | | |  __/ '
+    puts '   \_|  |_/\___/ \_/ |_|\___|   \_/ |_|_| |_| |_|\___| '
+    puts " "                                                       
+end
 
-# puts " "
-# puts '   ___  ___           _        _____ _                 '
-# puts '   |  \/  |          (_)      |_   _(_)                '
-# puts '   | .  . | _____   ___  ___    | |  _ _ __ ___   ___  '
-# puts '   | |\/| |/ _ \ \ / / |/ _ \   | | | | '_ ` _ \ / _ \ '
-# puts '   | |  | | (_) \ V /| |  __/   | | | | | | | | |  __/ '
-# puts '   \_|  |_/\___/ \_/ |_|\___|   \_/ |_|_| |_| |_|\___| '
-# puts " "                                                       
-# end
-
-# movie_time_image
-
+#1
     def welcome_greeting
         puts "Hey there! Thanks for using my film searching program, Movie Time!"
         puts " "
         puts "Just search for a film and I will do my best to give you some quick information about it!"
         puts " "
     end
-
+#3
     def get_movie(movie_name)
         response = API.get_movie(movie_name)
         if response
-        new_movie = Movie.new(response)
-        list_options
-        get_input_of_options(new_movie)
+            new_movie = Movie.new(response)
+            list_options
+            get_input_of_options(new_movie)
         else
             puts "Hey you! That is not a real movie!"
             ask_for_movie
         end
     end
-
+#4
     def list_options
         puts "Choose one to learn more information regarding the movie you have chosen!"
         puts "1. A short synopsis."
         puts "2. The IMDB score of the film."
     
     end
-
+#5
     def get_input_of_options(new_movie)
         user_input = gets.strip
+        # binding.pry
         if user_input == "1"
-            new_movie.overview
+           puts new_movie.overview
         elsif user_input == "2"
-            new_movie.score
+           puts new_movie.score
         else
             puts "Incorrect input! Please enter 1 or 2."
             get_input_of_options(new_movie)    
         end
     end
-
+#2
     def ask_for_movie
         puts "When you are ready friend, simply type in a movie name and hit enter, I will do the rest!"
         puts " "
@@ -64,13 +71,23 @@ class CLI
         puts " "
         user_input = gets.strip
         if Movie.find_by_title(user_input)
-        get_movie(user_input)
-
+            find_by_title
+        else
+            get_movie(user_input)
+        end
     end
 
-# method that grabs movie name in local variable
-# if and else to check whether movie name is valid, if not else statment is an error message
-#     once checked if valid call in another method that calls in api class
-
+    def loop_back_to_movie_search
+        puts " "
+        puts "Hey friend, wanna search another movie?"
+        puts "Just tell me what movie so I can help you out!"
+        puts " "
+        user_input = gets.strip
+        if Movie.find_by_title(user_input)
+            find_by_title
+        else
+            get_movie(user_input)
+        end
+    end
 
 end
