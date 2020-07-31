@@ -26,7 +26,12 @@ class CLI
         puts " "
     end
 
-
+    def ask_for_movie
+        puts "When you are ready friend, simply type in a movie name and I will do the rest!"
+        puts " "
+        puts "In fact, why don't you pop some popcorn right now as well? Movie Time makes learning about movies easy!"
+        puts " "
+    end
 
 
 
