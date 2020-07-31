@@ -65,6 +65,7 @@ end
     end
 #2
     def ask_for_movie
+        puts " "
         puts "When you are ready friend, simply type in a movie name and hit enter, I will do the rest!"
         puts " "
         puts "In fact, why don't you pop some popcorn right now as well? Movie Time makes learning about movies easy!"
@@ -82,6 +83,7 @@ end
         puts "Hey friend, wanna search another movie?"
         puts "Just tell me what movie so I can help you out!"
         puts " "
+        puts "If you are finished and would like to exit the program, simply type exit."
         user_input = gets.strip
         if Movie.find_by_title(user_input)
             find_by_title
