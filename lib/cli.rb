@@ -57,16 +57,16 @@ class CLI
         end
     end
 
-    # def ask_for_movie
-    #     puts "When you are ready friend, simply type in a movie name and hit enter, I will do the rest!"
-    #     puts " "
-    #     puts "In fact, why don't you pop some popcorn right now as well? Movie Time makes learning about movies easy!"
-    #     puts " "
-    #     user_input = gets.strip
-    #     if Movie.find_by_title(user_input)
-    #     get_movie(user_input)
+    def ask_for_movie
+        puts "When you are ready friend, simply type in a movie name and hit enter, I will do the rest!"
+        puts " "
+        puts "In fact, why don't you pop some popcorn right now as well? Movie Time makes learning about movies easy!"
+        puts " "
+        user_input = gets.strip
+        if Movie.find_by_title(user_input)
+        get_movie(user_input)
 
-    # end
+    end
 
 # method that grabs movie name in local variable
 # if and else to check whether movie name is valid, if not else statment is an error message
