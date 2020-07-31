@@ -45,17 +45,17 @@ class CLI
     
     end
 
-    # def get_input_of_options(new_movie)
-    #     user_input = gets.strip
-    #     if user_input == "1"
-    #         new_movie.overview
-    #     elsif user_input == "2"
-    #         new_movie.score
-    #     else
-    #         puts "Incorrect input! Please enter 1 or 2."
-    #         get_input_of_options(new_movie)    
-    #     end
-    # end
+    def get_input_of_options(new_movie)
+        user_input = gets.strip
+        if user_input == "1"
+            new_movie.overview
+        elsif user_input == "2"
+            new_movie.score
+        else
+            puts "Incorrect input! Please enter 1 or 2."
+            get_input_of_options(new_movie)    
+        end
+    end
 
     # def ask_for_movie
     #     puts "When you are ready friend, simply type in a movie name and hit enter, I will do the rest!"
