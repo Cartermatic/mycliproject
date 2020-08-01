@@ -7,3 +7,8 @@ It will then give you the option to search another film or exit the program, whi
 Note: Due to the program being a movie searching program, while inside of the specific film searching part of the run process, typing exit will return a movie named Exit, the exit command must be used outside of or after you have searched a movie!
 Enjoy using Movie Time!
 
+Prerequisites:
+This program requires HTTParty
+    Simply run: bundle install
+You should be good to go!
+
