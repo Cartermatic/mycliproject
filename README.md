@@ -17,3 +17,55 @@ Installation steps:
 2. Change directories using: cd mycliproject
 3. Install HTTParty by running: bundle install
 4. Run: ruby bin/run
+
+Sample:
+   ___  ___           _        _____ _
+   |  \/  |          (_)      |_   _(_)
+   | .  . | _____   ___  ___    | |  _ _ __ ___   ___
+   | |\/| |/ _ \ \ / / |/ _ \   | | | | `_ ` _ \ / _ \
+   | |  | | (_) \ V /| |  __/   | | | | | | | | |  __/
+   \_|  |_/\___/ \_/ |_|\___|   \_/ |_|_| |_| |_|\___|
+
+
+Hey there! Thanks for using my film searching program, Movie Time!
+
+Just search for a film and I will do my best to give you some quick information about it!
+
+
+When you are ready friend, simply type in a movie name and hit enter, I will do the rest!
+
+In fact, why don't you pop some popcorn right now as well? Movie Time makes learning about movies easy!
+
+batman                      #USER INPUT
+ 
+Choose one to learn more information regarding the movie you have chosen!
+
+1. A short synopsis.
+2. The IMDB score of the film.
+
+1                           #USER INPUT
+ 
+Driven by tragedy, billionaire Bruce Wayne dedicates his life to uncovering and defeating the corruption that plagues his home, Gotham City.  Unable to work within the system, he instead creates a new identity, a symbol of fear for 
+the criminal underworld - The Batman.
+
+Hey friend, wanna search another movie?
+Just tell me what movie so I can help you out!
+
+If you are finished and would like to exit the program, simply type exit.
+exit                            #USER INPUT
+
+
+
+#END SAMPLE
+
+Contributing:
+    Please submit bug reports at https://github.com/Cartermatic/mycliproject. This project is purely used as an educational tool and is open for others to use to further education and learn more about programming as a whole.  Contributors are expected to adhere to the Contributor Covenant Code of Conduct.
+
+Authors:
+Carter Parrett
+
+License:
+This project is licensed under: https://opensource.org/licenses/MIT
+
+Acknowledgments:
+The Movie Database API for use of their public API.
