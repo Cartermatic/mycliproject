@@ -12,3 +12,8 @@ This program requires HTTParty
     Simply run: bundle install
 You should be good to go!
 
+Installation steps:
+1. Clone this repository
+2. Change directories using: cd mycliproject
+3. Install HTTParty by running: bundle install
+4. Run: ruby bin/run
