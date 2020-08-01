@@ -19,13 +19,6 @@ Installation steps:
 4. Run: ruby bin/run
 
 Sample:
-   ___  ___           _        _____ _
-   |  \/  |          (_)      |_   _(_)
-   | .  . | _____   ___  ___    | |  _ _ __ ___   ___
-   | |\/| |/ _ \ \ / / |/ _ \   | | | | `_ ` _ \ / _ \
-   | |  | | (_) \ V /| |  __/   | | | | | | | | |  __/
-   \_|  |_/\___/ \_/ |_|\___|   \_/ |_|_| |_| |_|\___|
-
 
 Hey there! Thanks for using my film searching program, Movie Time!
 
