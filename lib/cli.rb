@@ -47,6 +47,7 @@ class CLI
     def list_options
         puts " "
         puts "Choose one to learn more information regarding the movie you have chosen!"
+        puts " "
         puts "1. A short synopsis."
         puts "2. The IMDB score of the film."
         puts " "   
@@ -57,8 +58,10 @@ class CLI
         user_input = gets.strip
 
         if user_input == "1"
+            puts " "
            puts new_movie.overview
         elsif user_input == "2"
+            puts " "
            puts new_movie.score
         else
             puts "Incorrect input! Please enter 1 or 2."
@@ -92,7 +95,7 @@ class CLI
         user_input = gets.strip
 
         if user_input == "exit" || user_input == "Exit"
-            abort "\nThank you for using Movie Time! Enjoy your movie!"
+            abort "\nThank you for using Movie Time! Enjoy your movie!\n"
         elsif Movie.find_by_title(user_input)
             find_by_title
         else
