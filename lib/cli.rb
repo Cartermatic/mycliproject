@@ -79,7 +79,10 @@ class CLI
         user_input = gets.strip
 
         if Movie.find_by_title(user_input)
-            find_by_title
+           new_movie = Movie.find_by_title(user_input)
+            list_options
+            get_input_of_options(new_movie)
+
         else
             get_movie(user_input)
         end
@@ -97,7 +100,10 @@ class CLI
         if user_input == "exit" || user_input == "Exit"
             abort "\nThank you for using Movie Time! Enjoy your movie!\n"
         elsif Movie.find_by_title(user_input)
-            find_by_title
+           new_movie = Movie.find_by_title(user_input)
+           list_options
+           get_input_of_options(new_movie)
+           loop_back_to_movie_search
         else
             get_movie(user_input)
         end    

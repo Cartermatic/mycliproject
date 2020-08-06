@@ -1,7 +1,7 @@
+
 class Movie
 
     attr_accessor :title, :overview, :score
-
     @@all = []
 
     def initialize(movie)
